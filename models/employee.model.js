@@ -10,10 +10,14 @@ module.exports = (sequelize, Sequelize) => {
       employeeName: {
         type: Sequelize.STRING,
       },
+      startDate: {
+        type: Sequelize.DATEONLY,
+      },
       email: {
         type: Sequelize.STRING,
         primaryKey: true,
       },
+      // org structure
       level1: {
         type: Sequelize.STRING,
       },
@@ -29,46 +33,46 @@ module.exports = (sequelize, Sequelize) => {
       level5: {
         type: Sequelize.STRING,
       },
+      positionEntryDate: {
+        type: Sequelize.DATEONLY,
+      },
       positionTitle: {
         type: Sequelize.STRING,
       },
       directManager: {
         type: Sequelize.STRING,
       },
-      startDate: {
-        type: Sequelize.DATEONLY,
-      },
       levelFromCeo: {
         type: Sequelize.STRING,
       },
-
+      // boolean
       hasBonus: {
         type: Sequelize.STRING,
       },
       isManager: {
         type: Sequelize.STRING,
       },
-
+      // self review
       selfEvaluation: {
         type: Sequelize.STRING,
       },
       selfEvaluationPrevious: {
         type: Sequelize.STRING,
       },
-
+      // manager review
       managerEvaluation: {
         type: Sequelize.STRING,
       },
       managerEvaluationComment: {
         type: Sequelize.STRING,
       },
-      managerEvaluationCalibration: {
+      calibration: {
         type: Sequelize.STRING,
       },
-      managerEvaluationCalibrationComment: {
+      calibrationComment: {
         type: Sequelize.STRING,
       },
-
+      // feedback
       feedbackPeer: {
         type: Sequelize.STRING,
       },
@@ -81,7 +85,7 @@ module.exports = (sequelize, Sequelize) => {
       feedbackComment: {
         type: Sequelize.STRING,
       },
-
+      // bonus
       targetBonusSum: {
         type: Sequelize.INTEGER,
       },
@@ -91,7 +95,7 @@ module.exports = (sequelize, Sequelize) => {
       targetBonusBudget: {
         type: Sequelize.INTEGER,
       },
-
+      // technical
       lastModifiedOn: {
         type: Sequelize.DATEONLY,
       },

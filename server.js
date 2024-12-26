@@ -15,11 +15,11 @@ app.use(express.urlencoded({ extended: true }))
 const db = require('./models')
 const Role = db.role
 
-// db.sequelize.sync()
-db.sequelize.sync({ force: true }).then(() => {
-  console.log('Drop and Resync Database...')
-  initiateUserRoles()
-})
+db.sequelize.sync()
+// db.sequelize.sync({ force: true }).then(() => {
+//   console.log('Drop and Resync Database...')
+//   initiateUserRoles()
+// })
 
 // routes
 require('./routes/auth.routes')(app)
