@@ -16,6 +16,13 @@ exports.employees = async (req, res) => {
   res.status(200).json(employee)
 }
 
+exports.singleEmployee = async (req, res) => {
+  const employee = await Employee.findAll({
+    where: { email: req.body.email },
+  })
+  res.status(200).json(employee)
+}
+
 exports.updateEmployee = (req, res) => {
   Employee.update(
     {

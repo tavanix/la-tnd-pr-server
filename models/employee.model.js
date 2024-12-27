@@ -89,9 +89,6 @@ module.exports = (sequelize, Sequelize) => {
       targetBonusSum: {
         type: Sequelize.INTEGER,
       },
-      targetBonusPercent: {
-        type: Sequelize.INTEGER,
-      },
       targetBonusBudget: {
         type: Sequelize.INTEGER,
       },
