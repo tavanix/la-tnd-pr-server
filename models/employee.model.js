@@ -4,14 +4,15 @@ module.exports = (sequelize, Sequelize) => {
   const Employee = sequelize.define(
     'employees',
     {
+      // id: {
+      //   type: Sequelize.UUID,
+      //   defaultValue: Sequelize.UUIDV4,
+      // },
       employeeId: {
         type: Sequelize.STRING,
       },
       employeeName: {
         type: Sequelize.STRING,
-      },
-      startDate: {
-        type: Sequelize.DATEONLY,
       },
       email: {
         type: Sequelize.STRING,
@@ -32,6 +33,9 @@ module.exports = (sequelize, Sequelize) => {
       },
       level5: {
         type: Sequelize.STRING,
+      },
+      startDate: {
+        type: Sequelize.DATEONLY,
       },
       positionEntryDate: {
         type: Sequelize.DATEONLY,

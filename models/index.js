@@ -29,6 +29,6 @@ db.user.belongsToMany(db.role, {
   through: 'user_roles',
 })
 
-db.ROLES = ['admin', 'cnb', 'tnd', 'hrbp']
+db.ROLES = ['admin', 'cnb', 'tnd', 'hrbp_hr', 'hrbp_it']
 
 module.exports = db

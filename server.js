@@ -50,6 +50,11 @@ function initiateUserRoles() {
 
   Role.create({
     id: 3,
-    name: 'hrbp',
+    name: 'hrbp_hr',
+  })
+
+  Role.create({
+    id: 4,
+    name: 'hrbp_it',
   })
 }
