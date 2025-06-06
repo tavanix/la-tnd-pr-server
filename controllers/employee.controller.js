@@ -34,3 +34,26 @@ exports.updateEmployee = (req, res) => {
     .then(() => res.status(200).json('Оценка успешно обновлена!'))
     .catch((err) => res.status(500).send({ message: err.message }))
 }
+
+exports.employeesBulk = async (req, res) => {
+  try {
+    const employees = req.body
+
+    if (!Array.isArray(employees)) {
+      return res.status(400).json({ message: 'Invalid data format' })
+    }
+
+    // TODO: добавить валидацию данных
+    const created = await Employee.bulkCreate(employees, {
+      updateOnDuplicate: ['email'], // если email уникален
+    })
+
+    res.status(201).json({
+      message: 'Employees uploaded successfully',
+      count: created.length,
+    })
+  } catch (error) {
+    console.error(error)
+    res.status(500).json({ message: 'Error uploading employees' })
+  }
+}

@@ -5,7 +5,8 @@ const env = require('dotenv/config')
 const app = express()
 
 let corsOptions = {
-  origin: 'http://localhost:1008',
+  origin: process.env.URL,
+  // origin: 'http://localhost:1008',
 }
 
 app.use(cors(corsOptions))
