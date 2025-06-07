@@ -1,13 +1,10 @@
 const { DataTypes } = require('sequelize')
+const { encrypt, decrypt } = require('../utils/encryption')
 
 module.exports = (sequelize, Sequelize) => {
   const Employee = sequelize.define(
     'employees',
     {
-      // id: {
-      //   type: Sequelize.UUID,
-      //   defaultValue: Sequelize.UUIDV4,
-      // },
       employeeId: {
         // Табельный номер
         type: Sequelize.STRING,
@@ -15,6 +12,13 @@ module.exports = (sequelize, Sequelize) => {
       employeeName: {
         // Сотрудник
         type: Sequelize.STRING,
+        set(value) {
+          this.setDataValue('employeeName', encrypt(value))
+        },
+        get() {
+          const raw = this.getDataValue('employeeName')
+          return raw ? decrypt(raw) : null
+        },
       },
       email: {
         // Email
@@ -108,11 +112,25 @@ module.exports = (sequelize, Sequelize) => {
       },
       targetBonusSum: {
         // Target bonus sum
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
+        // set(value) {
+        //   this.setDataValue('targetBonusSum', encrypt(value))
+        // },
+        // get() {
+        //   const raw = this.getDataValue('targetBonusSum')
+        //   return raw ? decrypt(raw) : null
+        // },
       },
       targetBonusBudget: {
         // Budget bonus sum
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
+        // set(value) {
+        //   this.setDataValue('targetBonusBudget', encrypt(value))
+        // },
+        // get() {
+        //   const raw = this.getDataValue('targetBonusBudget')
+        //   return raw ? decrypt(raw) : null
+        // },
       },
 
       isSubmitted: {
