@@ -12,20 +12,12 @@ module.exports = (sequelize, Sequelize) => {
       employeeName: {
         // Сотрудник
         type: Sequelize.STRING,
-        set(value) {
-          this.setDataValue('employeeName', encrypt(value))
-        },
-        get() {
-          const raw = this.getDataValue('employeeName')
-          return raw ? decrypt(raw) : null
-        },
       },
       email: {
         // Email
         type: Sequelize.STRING,
         primaryKey: true,
       },
-      // org structure
       level1: {
         // Подразделение уровень 1
         type: Sequelize.STRING,
@@ -113,24 +105,24 @@ module.exports = (sequelize, Sequelize) => {
       targetBonusSum: {
         // Target bonus sum
         type: Sequelize.STRING,
-        // set(value) {
-        //   this.setDataValue('targetBonusSum', encrypt(value))
-        // },
-        // get() {
-        //   const raw = this.getDataValue('targetBonusSum')
-        //   return raw ? decrypt(raw) : null
-        // },
+        set(value) {
+          this.setDataValue('targetBonusSum', encrypt(value))
+        },
+        get() {
+          const raw = this.getDataValue('targetBonusSum')
+          return raw ? decrypt(raw) : null
+        },
       },
       targetBonusBudget: {
         // Budget bonus sum
         type: Sequelize.STRING,
-        // set(value) {
-        //   this.setDataValue('targetBonusBudget', encrypt(value))
-        // },
-        // get() {
-        //   const raw = this.getDataValue('targetBonusBudget')
-        //   return raw ? decrypt(raw) : null
-        // },
+        set(value) {
+          this.setDataValue('targetBonusBudget', encrypt(value))
+        },
+        get() {
+          const raw = this.getDataValue('targetBonusBudget')
+          return raw ? decrypt(raw) : null
+        },
       },
 
       isSubmitted: {
