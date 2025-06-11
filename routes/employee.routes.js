@@ -11,8 +11,6 @@ module.exports = function (app) {
   })
 
   app.get('/api/employees', authJwt.verifyToken, controller.employees)
-  // app.put('/api/updateEmployee', authJwt.verifyToken, controller.updateEmployee)
-  app.put('/api/updateEmployee', controller.updateEmployee)
-
-  app.post('/api/employees/bulk', controller.employeesBulk)
+  app.put('/api/updateEmployee', authJwt.verifyToken, controller.updateEmployee)
+  app.post('/api/employees/bulk', authJwt.verifyToken, controller.employeesBulk)
 }
