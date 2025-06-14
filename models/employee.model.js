@@ -8,39 +8,15 @@ module.exports = (sequelize, Sequelize) => {
       employeeId: {
         // Табельный номер
         type: Sequelize.STRING,
-        // encryption
-        set(value) {
-          this.setDataValue('employeeId', encrypt(value))
-        },
-        get() {
-          const raw = this.getDataValue('employeeId')
-          return raw ? decrypt(raw) : null
-        },
       },
       employeeName: {
         // Сотрудник
         type: Sequelize.STRING,
-        // encryption
-        set(value) {
-          this.setDataValue('employeeName', encrypt(value))
-        },
-        get() {
-          const raw = this.getDataValue('employeeName')
-          return raw ? decrypt(raw) : null
-        },
       },
       email: {
         // Email
         type: Sequelize.STRING,
         primaryKey: true,
-        // encryption
-        set(value) {
-          this.setDataValue('email', encrypt(value))
-        },
-        get() {
-          const raw = this.getDataValue('email')
-          return raw ? decrypt(raw) : null
-        },
       },
       level1: {
         // Подразделение уровень 1
@@ -65,26 +41,10 @@ module.exports = (sequelize, Sequelize) => {
       positionTitle: {
         // Должность
         type: Sequelize.STRING,
-        // encryption
-        set(value) {
-          this.setDataValue('positionTitle', encrypt(value))
-        },
-        get() {
-          const raw = this.getDataValue('positionTitle')
-          return raw ? decrypt(raw) : null
-        },
       },
       directManager: {
         // Руководитель
         type: Sequelize.STRING,
-        // encryption
-        set(value) {
-          this.setDataValue('directManager', encrypt(value))
-        },
-        get() {
-          const raw = this.getDataValue('directManager')
-          return raw ? decrypt(raw) : null
-        },
       },
       startDate: {
         // Дата приема _adj
