@@ -76,7 +76,7 @@ module.exports = (sequelize, Sequelize) => {
       },
       selfEvaluation: {
         // Результат самооценки
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT('long'),
       },
       selfEvaluationComment: {
         // Комментарий к самооценке
