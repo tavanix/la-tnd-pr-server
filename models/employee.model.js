@@ -68,7 +68,7 @@ module.exports = (sequelize, Sequelize) => {
       },
       target: {
         // Цель
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT('long'),
       },
       areTargetsSetOnSelfReview: {
         // Цели поставлены только в самооценку
@@ -80,7 +80,7 @@ module.exports = (sequelize, Sequelize) => {
       },
       selfEvaluationComment: {
         // Комментарий к самооценке
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT('long'),
       },
       managerEvaluation: {
         // Оценка руководителя
@@ -88,7 +88,7 @@ module.exports = (sequelize, Sequelize) => {
       },
       managerEvaluationComment: {
         // Комментарии к оценке руководителя
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT('long'),
       },
       calibration: {
         // Изменение оценки на калибровке
@@ -96,7 +96,7 @@ module.exports = (sequelize, Sequelize) => {
       },
       calibrationComment: {
         // Комментарий к изменению оценки
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT('long'),
       },
       managerEvaluationPrevious: {
         // Оценка руководителя H2 2024
