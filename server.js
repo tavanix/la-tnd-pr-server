@@ -41,16 +41,96 @@ function initiateUserRoles() {
 
   Role.create({
     id: 1,
-    name: 'tnd',
+    name: 'cis_all',
   })
 
   Role.create({
     id: 2,
-    name: 'hrbp_hr',
+    name: 'cis_kz',
   })
 
   Role.create({
     id: 3,
-    name: 'hrbp_it',
+    name: 'cis_by',
+  })
+
+  Role.create({
+    id: 4,
+    name: 'audit',
+  })
+
+  Role.create({
+    id: 5,
+    name: 'purchasing',
+  })
+
+  Role.create({
+    id: 6,
+    name: 'it',
+  })
+
+  Role.create({
+    id: 7,
+    name: 'corp_gov',
+  })
+
+  Role.create({
+    id: 8,
+    name: 'marketplace',
+  })
+
+  Role.create({
+    id: 9,
+    name: 'product',
+  })
+
+  Role.create({
+    id: 10,
+    name: 'retail',
+  })
+
+  Role.create({
+    id: 11,
+    name: 'strategy',
+  })
+
+  Role.create({
+    id: 12,
+    name: 'hr_admin',
+  })
+
+  Role.create({
+    id: 13,
+    name: 'finance',
+  })
+
+  Role.create({
+    id: 14,
+    name: 'marketing',
+  })
+
+  Role.create({
+    id: 15,
+    name: 'lfc',
+  })
+
+  Role.create({
+    id: 16,
+    name: 'ops_alypova',
+  })
+
+  Role.create({
+    id: 17,
+    name: 'ops_musina',
+  })
+
+  Role.create({
+    id: 18,
+    name: 'ops_adamovich',
+  })
+
+  Role.create({
+    id: 19,
+    name: 'all',
   })
 }
