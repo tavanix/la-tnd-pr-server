@@ -28,6 +28,8 @@ exports.updateEmployee = (req, res) => {
     {
       calibration: req.body.calibration,
       calibrationComment: req.body.calibrationComment,
+      lastModifiedBy: req.body.lastModifiedBy,
+      lastModifiedOn: req.body.lastModifiedOn,
     },
     { where: { email: req.body.email } }
   )
