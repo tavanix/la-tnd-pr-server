@@ -133,4 +133,29 @@ function initiateUserRoles() {
     id: 19,
     name: 'all',
   })
+
+  Role.create({
+    id: 20,
+    name: 'extra_1',
+  })
+
+  Role.create({
+    id: 21,
+    name: 'extra_2',
+  })
+
+  Role.create({
+    id: 22,
+    name: 'extra_3',
+  })
+
+  Role.create({
+    id: 23,
+    name: 'extra_4',
+  })
+
+  Role.create({
+    id: 24,
+    name: 'extra_5',
+  })
 }

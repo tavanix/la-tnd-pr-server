@@ -51,6 +51,11 @@ db.ROLES = [
   'ops_musina',
   'ops_adamovich',
   'all',
+  'extra_1',
+  'extra_2',
+  'extra_3',
+  'extra_4',
+  'extra_5',
 ]
 
 module.exports = db
